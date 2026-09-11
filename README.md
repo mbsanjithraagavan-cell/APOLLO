@@ -215,7 +215,5 @@ Latest verified result: **113 passed, 0 failed, 0 skipped, 2 warnings**. The fro
 
 APOLLO is a hackathon prototype using fictional clinic data. Patient and doctor delivery is simulated unless an external provider is explicitly configured. It is not a production hospital system and does not provide diagnosis, prescriptions, or medical decision-making.
 
-## License
 
-Add a license appropriate for your repository before public distribution.
 
