@@ -202,6 +202,7 @@ npm run build
 Latest verified result: **113 passed, 0 failed, 0 skipped, 2 warnings**. The frontend production build passes. Live supported booking interpretation has been verified with `interpretation_mode = gemma` and `gemma_parse_status = success`.
 
 ## Screenshots
+<img width="960" height="600" alt="Screenshot 2026-09-11 115307" src="https://github.com/user-attachments/assets/e42e031c-ba3e-49a5-a125-d627dbb391c8" />
 
 <!-- Add verified screenshots when available. Do not commit fabricated images. -->
 
