@@ -14,4 +14,10 @@ class NotificationDispatcher:
             c.drawString(50,y,line[:110]); y-=18
         c.save()
         return {"html":str(hp),"pdf":str(pp),"email":"SIMULATED","calendar":"SIMULATED","appointment_id":str(appointment_id)}
+    def render_dual(self, appointment_id, patient_reference, patient_name, treatment, doctor, specialty, starts_at, room, billing, citations=()):
+        base=self.render(appointment_id,patient_reference,doctor,specialty,starts_at,room,billing,citations)
+        doctor_record={"doctor_name":doctor,"appointment_id":str(appointment_id),"patient_reference":str(patient_reference),"patient_name":patient_name,"treatment":treatment,"date":starts_at.date().isoformat(),"time":starts_at.time().isoformat(),"room":room,"doctor_email_status":"SIMULATED_SENT"}
+        base.update({"patient_name":patient_name,"treatment":treatment,"patient_email_status":"SIMULATED_SENT","doctor_notification":doctor_record})
+        return base
+
 

@@ -12,11 +12,16 @@ class ScopedToolAgent:
 
 class PolicyRAGAgent(ScopedToolAgent):
     allowed_tools=frozenset({"query_clinic_policies"})
+    def __init__(self, tools, generator=None):
+        super().__init__(tools)
+        self.generator = generator
     def answer(self, question: str) -> dict:
         chunks=self.call("query_clinic_policies",question)
         valid={x["chunk_id"] for x in chunks}
         grounded=[x for x in chunks if x["distance"] <= 0.75]
         answer=" ".join(x["content"] for x in grounded)
+        if answer and self.generator is not None:
+            answer = self.generator(question, grounded)
         confidence=0.85 if answer else 0.2
         return {"draft":answer,"chunks":chunks,"valid_chunk_ids":valid,"confidence":confidence}
 

@@ -16,6 +16,13 @@ gatekeeper = Gatekeeper(database) if database else None
 class SlotSearchInput(BaseModel):
     model_config=ConfigDict(extra="forbid", frozen=True)
     specialty: str = Field(min_length=1,max_length=100)
+class DoctorSearchInput(BaseModel):
+    model_config=ConfigDict(extra="forbid", frozen=True)
+    specialty: str = Field(min_length=1,max_length=100)
+class DoctorSlotsInput(BaseModel):
+    model_config=ConfigDict(extra="forbid", frozen=True)
+    doctor_id: UUID
+
 class LeaseInput(BaseModel):
     model_config=ConfigDict(extra="forbid", frozen=True)
     slot_id: UUID
@@ -40,6 +47,18 @@ def search_doctor_slots(request: SlotSearchInput) -> list[SlotCandidate]:
 def stage_slot_lease(request: LeaseInput) -> LeaseResult:
     if leases is None: raise RuntimeError("redis_not_configured")
     return leases.stage(request.slot_id)
+
+@server.tool
+def list_available_doctors(request: DoctorSearchInput) -> list[dict]:
+    if database is None:
+        raise RuntimeError("database_not_configured")
+    return database.list_available_doctors(request.specialty.strip().lower())
+
+@server.tool
+def list_available_slots(request: DoctorSlotsInput) -> list[dict]:
+    if database is None:
+        raise RuntimeError("database_not_configured")
+    return database.list_available_slots(request.doctor_id)
 
 @server.tool
 def commit_slot_booking(request: BookingInput) -> UUID:
@@ -67,6 +86,9 @@ def commit_slot_booking(request: BookingInput) -> UUID:
     return result[0]
 
 if __name__=="__main__": server.run(transport="stdio")
+
+
+
 
 
 

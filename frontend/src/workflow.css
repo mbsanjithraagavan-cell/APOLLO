@@ -1,0 +1,39 @@
+
+/* Interaction and responsive behavior for the web workflow. */
+[hidden]{display:none!important}
+button,textarea,a{ -webkit-tap-highlight-color:transparent }
+button{font-family:inherit}
+button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #177669;outline-offset:4px}
+button:disabled{cursor:wait;opacity:.65}
+::selection{background:#b9e6d4;color:#153c38}
+textarea{caret-color:#0e6b64}
+.wizard-fields{border:0;margin:0;padding:0;min-width:0}
+label{display:block;font-weight:600;margin:22px 0 8px}
+textarea{width:100%;min-height:90px;resize:vertical;border:1px solid #9eb5ad;border-radius:10px;padding:12px;font:inherit}
+.back{margin-bottom:18px;margin-top:12px}
+.loading,.error{display:flex;align-items:center;gap:10px}
+.demo-label{font-size:13px;color:#466963!important}
+.treatments .treatment-card small{color:#476962}
+.card-arrow{margin-top:22px!important;margin-bottom:0!important;width:18px!important}
+.slots .selected{background:#d8eee4;border:2px solid #0e6b64}
+.summary{max-width:none;text-align:left}
+.summary p,.summary h2{gap:20px}
+.summary p span{min-width:100px}
+.appointment-id{overflow-wrap:anywhere;font-size:13px}
+.file-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+.verified{color:#0c6852}
+.sources{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.sources span{padding:5px 8px;background:#dcebe5;border-radius:5px}
+.trace-list{list-style:none;padding:0;margin:24px 0}
+.trace-list li{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid #dae7e1;text-transform:capitalize}
+.trace-list time{font-variant-numeric:tabular-nums;color:#496c63}
+footer{margin-top:36px;font-size:12px;color:#4c7068}
+nav{overflow-x:auto}
+nav button{white-space:nowrap}
+.steps aside div{color:#506f67}
+@media(max-width:760px){.panel,.assistant,.activity,.empty{padding:20px}.summary p{flex-wrap:wrap}.summary h2{font-size:21px}.steps aside{flex-wrap:wrap}.status{display:flex}.brand p{max-width:290px}.intro h2{font-size:36px}.success{padding:8px}.steps aside div{font-size:12px}.notify{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+.agent-booking{max-width:850px}.recommendation{margin-top:28px;padding:24px;background:#f4faf7;border:1px solid #d5e7df;border-radius:14px}.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:11px;color:#0e6b64;font-weight:700}.recommendation .back{margin-left:10px}.alternatives{margin-top:15px;color:#496c63}
+
+.agent-booking{max-width:850px}.recommendation{margin-top:28px;padding:24px;background:#f4faf7;border:1px solid #d5e7df;border-radius:14px}.eyebrow{text-transform:uppercase;letter-spacing:.08em;font-size:11px;color:#0e6b64;font-weight:700}.recommendation .back{margin-left:10px}.alternatives{margin-top:15px;color:#496c63}

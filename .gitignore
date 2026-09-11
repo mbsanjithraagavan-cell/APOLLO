@@ -38,3 +38,5 @@ docs/standalone-resolution.json
 docs/runtime-metadata.json
 
 Docker Desktop Installer.exe
+node_modules/
+frontend/dist/
