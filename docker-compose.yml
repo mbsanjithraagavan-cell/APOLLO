@@ -1,0 +1,31 @@
+name: apollo
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: apollo
+      POSTGRES_USER: apollo
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a local PostgreSQL password}
+    ports: ["127.0.0.1:5432:5432"]
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U apollo -d apollo"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+  redis:
+    image: redis:7.2
+    command: ["redis-server", "--appendonly", "yes"]
+    ports: ["127.0.0.1:6379:6379"]
+    volumes: [redis_data:/data]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+volumes:
+  postgres_data:
+  redis_data:
+

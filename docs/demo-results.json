@@ -1,0 +1,47 @@
+{
+  "docker": {
+    "postgresql": "healthy",
+    "redis": "healthy"
+  },
+  "booking": {
+    "status": "succeeded",
+    "mcp_tools": [
+      "search_doctor_slots",
+      "stage_slot_lease",
+      "commit_slot_booking"
+    ],
+    "specialty": "cardiology",
+    "slot": "101",
+    "postgresql_appointment": "created",
+    "redis_lease_consumed": true,
+    "redis_exists_after_commit": 0,
+    "billing": {
+      "currency": "INR",
+      "subtotal": "350.00",
+      "tax": "17.50",
+      "total": "367.50"
+    },
+    "notification": {
+      "html": "generated",
+      "pdf": "generated",
+      "email": "SIMULATED",
+      "calendar": "SIMULATED"
+    }
+  },
+  "rag": {
+    "status": "succeeded",
+    "chunks": ["chunk_checkin_01", "chunk_prep_01", "chunk_visit_01"],
+    "citations_validated": true,
+    "confidence": 0.85,
+    "safety_critic_decision": "allow"
+  },
+  "safety": {
+    "disposition": "emergency",
+    "confidence": 0.99
+  },
+  "tests": {
+    "mcp_integration": "passed",
+    "complete_suite": "86 passed",
+    "warnings": "1 non-fatal FastMCP/Pydantic warning"
+  }
+}

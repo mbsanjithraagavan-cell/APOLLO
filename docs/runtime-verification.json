@@ -1,0 +1,30 @@
+{
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "prefix": "D:\\APOLLO\\.venv",
+  "packages": {
+    "torch": "2.14.0",
+    "transformers": "5.16.1",
+    "sentence_transformers": "6.0.1",
+    "pydantic": "2.13.5",
+    "langgraph": "1.2.11",
+    "langchain_core": "1.6.2",
+    "fastmcp": "4.0.3",
+    "mcp": "2.2.0",
+    "psycopg": "3.3.5",
+    "pgvector": "0.5.0",
+    "redis": "8.1.0",
+    "pytest": "9.1.1",
+    "reportlab": "5.0.1",
+    "websockets": "16.0"
+  },
+  "gemma": {
+    "path": "C:\\SLM-WORKSHOP\\models\\it",
+    "class": "Gemma3ForCausalLM",
+    "parameters": 999885952,
+    "adapter_loaded": false
+  },
+  "embedding_shape": [
+    1,
+    384
+  ]
+}

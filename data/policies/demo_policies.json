@@ -1,0 +1,7 @@
+[
+{"chunk_id":"chunk_prep_01","category":"outpatient_preparation","content":"For a scheduled outpatient consultation, bring the appointment reference and a current medication list. Arrive with a government-issued identification document if registration staff request it. [chunk_prep_01]"},
+{"chunk_id":"chunk_fasting_01","category":"fasting_preparation","content":"Fasting is required only when the appointment instructions explicitly say so. Follow the clinic instruction attached to the appointment; do not infer fasting requirements from the specialty alone. [chunk_fasting_01]"},
+{"chunk_id":"chunk_cancel_01","category":"cancellation_rescheduling","content":"To cancel or reschedule, contact the outpatient desk before the appointment time and provide the appointment reference. Availability for a replacement slot is not guaranteed. [chunk_cancel_01]"},
+{"chunk_id":"chunk_checkin_01","category":"arrival_checkin","content":"Patients should arrive 20 minutes before the scheduled outpatient appointment for registration and check-in. Late arrival may require a new slot if the clinic cannot safely accommodate the remaining time. [chunk_checkin_01]"},
+{"chunk_id":"chunk_visit_01","category":"visiting_administrative","content":"Administrative visiting rules vary by clinic area. The front desk can confirm the number of accompanying visitors permitted for the appointment. [chunk_visit_01]"}
+]

@@ -1,0 +1,2 @@
+# Security controls
+PII is redacted before LLM-facing nodes. Prompt-injection indicators fail closed to escalation. Tool agents expose allow-listed tool names only; arbitrary SQL is not exposed. Monetary values use Decimal and trusted PostgreSQL tariffs. Redis tokens are single-use staging leases; PostgreSQL owns final booking state. Traces are local JSONL with contact-like values redacted. Simulated email/calendar output is explicitly labeled SIMULATED.
